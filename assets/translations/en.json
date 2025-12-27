@@ -1,0 +1,74 @@
+{
+  "introduction_title_one": "Personalize Your Experience",
+  "introduction_description_one": "Choose your preferred theme and language to get started with a comfortable, tailored experience that suits your style.",
+  "introduction_title_two": "Find Events That Inspire You",
+  "introduction_description_two": "Dive into a world of events crafted to fit your unique interests. Whether you're into live music, art workshops, professional networking, or simply discovering new experiences, we have something for everyone. Our curated recommendations will help you explore, connect, and make the most of every opportunity around you.",
+  "introduction_title_three": "Effortless Event Planning",
+  "introduction_description_three": "Take the hassle out of organizing events with our all-in-one planning tools. From setting up invites and managing RSVPs to scheduling reminders and coordinating details, we’ve got you covered. Plan with ease and focus on what matters – creating an unforgettable experience for you and your guests.",
+  "introduction_title_four": "Connect with Friends & Share Moments",
+  "introduction_description_four": "Make every event memorable by sharing the experience with others. Our platform lets you invite friends, keep everyone in the loop, and celebrate moments together. Capture and share the excitement with your network, so you can relive the highlights and cherish the memories.",
+
+  "forget_password": "Forget Password",
+  "forget_password_question": "Forget Password?",
+  "email": "Email",
+  "enter_email": "Please enter your email",
+  "reset_password": "Reset Password",
+  "password_reset_email_sent": "A password reset link has been sent to your email",
+  "something_went_wrong": "Something went wrong, please try again",
+
+  "language": "Language",
+  "theme": "Theme",
+  "lets_start": "Let’s Start",
+  "password": "Password",
+  "login": "Login",
+  "dont_have_account_create_account": "Don’t Have Account? Create Account",
+  "login_with_google": "Login With Google",
+  "name": "Name",
+  "re_password": "Re Password",
+  "create_account": "Create Account",
+  "already_have_account_login": "Already have an account? Login",
+  "register": "Register",
+  "or": "Or",
+  "welcome_back": "Welcome Back ✨",
+  "en": "EN",
+
+  "all": "All",
+  "sport": "Sport",
+  "birthday": "Birthday",
+  "holiday": "Holiday",
+  "book_club": "Book Club",
+  "eating": "Eating",
+  "exhibition": "Exhibition",
+  "gaming": "Gaming",
+  "meeting": "Meeting",
+  "workshop": "Workshop",
+
+  "Home": "Home",
+  "Map": "Map",
+  "Love": "Love",
+  "Profile": "Profile",
+
+  "name_required": "Oops! Don’t forget to enter your name",
+  "name_letters_only": "Name can only contain letters",
+  "name_min_length": "Name must be at least 6 characters",
+
+  "email_required": "Oops! Don’t forget to enter your email",
+  "email_must_contain_at": "Email must contain '@' symbol",
+  "email_must_contain_letters_numbers": "Email must contain both letters and numbers",
+  "email_invalid_format": "Please enter a valid email format (example@mail.com)",
+
+  "password_required": "Oops! Don’t forget to enter your password",
+  "password_letters_numbers_only": "Password must contain both letters and numbers only",
+  "password_min_length": "Password must be at least 6 characters",
+
+  "re_password_required": "Please re-enter your password",
+  "passwords_not_match": "Passwords do not match",
+  "email_invalid_domain": "Email must end with @email.com",
+  "email_invalid_name": "Email must have a name before @",
+  "reset_password_success":
+  "If the email exists, a password reset link has been sent",
+  "reset_password_error":
+  "Something went wrong, please try again"
+
+
+}

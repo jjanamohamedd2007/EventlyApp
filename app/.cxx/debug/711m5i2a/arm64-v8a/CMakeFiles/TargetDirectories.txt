@@ -1,0 +1,2 @@
+C:/Users/janam/StudioProjects/evently_app/app/.cxx/debug/711m5i2a/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/janam/StudioProjects/evently_app/app/.cxx/debug/711m5i2a/arm64-v8a/CMakeFiles/rebuild_cache.dir
