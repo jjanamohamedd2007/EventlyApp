@@ -20,18 +20,16 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ارتفاع الشاشة
     final screenHeight = MediaQuery.of(context).size.height;
 
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(16.0), // مسافة من الأطراف
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // الصورة
             SizedBox(
-              height: screenHeight * 0.5, // نصف ارتفاع الشاشة
+              height: screenHeight * 0.5,
               child: Center(
                 child: Image.asset(
                   page['image']!,
@@ -41,21 +39,18 @@ class OnBoardingPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // العنوان
             Text(
               page['title']!,
               style: isDark ? DarkTheme.textMedium : LightTheme.textMedium,
             ),
             const SizedBox(height: 8),
 
-            // النص الوصفي
             Text(
               page['body']!,
               style: isDark ? DarkTheme.textSmall : LightTheme.textSmall,
             ),
             const SizedBox(height: 16),
 
-            // التبديل بين اللغة والثيم
             if (showToggles) ...[
               const SizedBox(height: 10),
               Row(

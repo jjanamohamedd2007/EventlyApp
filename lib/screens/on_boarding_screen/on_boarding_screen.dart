@@ -14,7 +14,6 @@ class OnBoardingScreen extends StatefulWidget {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isOnboardingSeen', true);
 
-    // بعد كده روح على صفحة تسجيل الدخول
     Navigator.pushReplacementNamed(context, '/login');
   }
 
@@ -34,7 +33,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     var provider = Provider.of<MyProvider>(context);
     final bool isDark = provider.themeMode == ThemeMode.dark;
 
-    // نولّد الصفحات هنا مباشرة عشان tr() تشتغل
     final pagesData = [
       {
         'title': tr("introduction_title_one"),

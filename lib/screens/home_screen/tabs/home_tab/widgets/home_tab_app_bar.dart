@@ -63,11 +63,9 @@ var auth=Provider.of<AuthProvider>(context);
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// ======= HEADER =======
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  /// welcome text
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -121,7 +119,6 @@ var auth=Provider.of<AuthProvider>(context);
                     ],
                   ),
 
-                  /// theme & lang buttons
                   Row(
                     children: [
                       InkWell(
@@ -171,7 +168,6 @@ var auth=Provider.of<AuthProvider>(context);
 
               const SizedBox(height: 12),
 
-              /// ======= CATEGORY FILTER =======
               SizedBox(
                 height: 40,
                 child: ListView.separated(

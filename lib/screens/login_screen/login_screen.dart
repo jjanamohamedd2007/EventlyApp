@@ -56,7 +56,6 @@ class LoginScreen extends StatelessWidget {
                 ImageHeaderWidget(),
                 const SizedBox(height: 20),
 
-                /// --------- Email ---------
                 TextFormFieldWidget(
                   hintText: tr("email"),
                   textInputType: TextInputType.emailAddress,
@@ -72,7 +71,6 @@ class LoginScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                /// --------- Password ---------
                 TextFormFieldWidget(
                   hintText: tr("password"),
                   textInputType: TextInputType.visiblePassword,
@@ -108,14 +106,12 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
 
-                /// --------- Login Button ---------
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Button_Widget(
                     text: tr("login"),
                       onPressed: () async {
                         if (formKey.currentState!.validate()) {
-                          // افتح Loading هنا مرة واحدة
                           showDialog(
                             context: context,
                             barrierDismissible: false,
@@ -130,7 +126,7 @@ class LoginScreen extends StatelessWidget {
                               passwordController.text.trim(),
                                   () async {
                                 await auth.initUser();
-                                Navigator.pop(context); // إخفاء Loading
+                                Navigator.pop(context);
                                 Navigator.pushNamedAndRemoveUntil(
                                   context,
                                   HomeScreen.routeName,
@@ -164,10 +160,10 @@ class LoginScreen extends StatelessWidget {
                                   ),
                                 );
                               },
-                                  () {}, // ✅ callback فارغ للـ Loading
+                                  () {},
                             );
                           } catch (e) {
-                            Navigator.pop(context); // إخفاء Loading لو حصل Exception
+                            Navigator.pop(context);
                           }
                         }
                       }
@@ -175,7 +171,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
 
-                /// --------- Signup ---------
                 TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, SignupScreen.routeName);

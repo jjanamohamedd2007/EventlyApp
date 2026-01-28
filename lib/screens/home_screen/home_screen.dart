@@ -3,7 +3,6 @@ import 'package:evently_app/screens/home_screen/tabs/map_tab/map_tab.dart';
 import 'package:evently_app/screens/home_screen/tabs/love_tab/love_tab.dart';
 import 'package:evently_app/screens/home_screen/tabs/profile_tab/profile_tab.dart';
 import 'package:evently_app/screens/create_event_screen/create_event_screen.dart';
-import 'package:evently_app/core/theme/app_colors.dart';
 import 'package:evently_app/core/theme/base_theme.dart';
 import 'package:evently_app/providers/home_navigation_provider.dart';
 import 'package:evently_app/providers/my_provider.dart';
@@ -25,11 +24,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with AutomaticKeepAliveClientMixin {
   @override
-  bool get wantKeepAlive => true; // ✅ يمنع إعادة البناء عند التبديل بين التابات
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
-    super.build(context); // ✅ ضروري عشان الـ mixin يشتغل
+    super.build(context);
 
     final provider = Provider.of<MyProvider>(context);
     final navProvider = Provider.of<HomeNavigationProvider>(context);
@@ -44,13 +43,12 @@ class _HomeScreenState extends State<HomeScreen>
     ];
 
     return Scaffold(
-        resizeToAvoidBottomInset: false, // ✅ يمنع تحريك الزر عند ظهور الكيبورد أو SnackBar
+        resizeToAvoidBottomInset: false,
         extendBody: true,
       backgroundColor: isDark
           ? BaseTheme.dark.scaffoldBackgroundColor
           : BaseTheme.light.scaffoldBackgroundColor,
 
-      // ✅ الصفحة بتفضل محفوظة وما بتتهزش
       body: IndexedStack(
         index: navProvider.currentIndex,
         children: pages,
@@ -61,8 +59,8 @@ class _HomeScreenState extends State<HomeScreen>
         onPressed: () async {
           await Navigator.of(context).push(PageRouteBuilder(
             pageBuilder: (_, __, ___) => const CreateEventScreen(),
-            transitionDuration: Duration.zero, // 🔥 مفيش حركة دخول
-            reverseTransitionDuration: Duration.zero, // 🔥 مفيش حركة خروج
+            transitionDuration: Duration.zero,
+            reverseTransitionDuration: Duration.zero,
           ));
         },
       ),

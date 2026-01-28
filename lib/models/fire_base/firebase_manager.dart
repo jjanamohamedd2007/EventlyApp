@@ -67,12 +67,10 @@ class FirebaseManager {
       isEqualTo: FirebaseAuth.instance.currentUser!.uid,
     );
 
-    // لو category = All → رجّعي كلهم بالترتيب
     if (categoryName == "All") {
       return collection.orderBy("date", descending: false).snapshots();
     }
 
-    // لو category غير All → رجّعي من غير ترتيب (علشان مفيش index)
     return collection.where("category", isEqualTo: categoryName).snapshots();
   }
 
@@ -143,7 +141,6 @@ class FirebaseManager {
         password: password,
       );
 
-      // ✅ هنا بنحدث بيانات المستخدم من السيرفر
       await credential.user!.reload();
 
       final user = FirebaseAuth.instance.currentUser;

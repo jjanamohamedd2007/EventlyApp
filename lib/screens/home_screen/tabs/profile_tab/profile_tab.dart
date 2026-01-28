@@ -30,7 +30,6 @@ class ProfileTab extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /// --------- HEADER ----------
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -88,7 +87,6 @@ class ProfileTab extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// --------- Language ----------
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
@@ -159,7 +157,6 @@ class ProfileTab extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            /// --------- Theme ----------
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
@@ -214,14 +211,13 @@ class ProfileTab extends StatelessWidget {
                 }).toList(),
                 onChanged: (value) {
                   provider
-                      .changeThemeMode(); // عشان يغير الوضع بين Light و Dark
+                      .changeThemeMode();
                 },
               ),
             ),
 
             const Spacer(),
 
-            /// --------- Logout ----------
             Padding(
               padding: const EdgeInsets.only(bottom: 80),
               child: LogOutButton(),

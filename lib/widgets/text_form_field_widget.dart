@@ -61,7 +61,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
               validator: (value) {
                 final result = widget.validator?.call(value);
                 setState(() {
-                  _errorText = result; // نخزن الرسالة للعرض
+                  _errorText = result;
                 });
                 return result;
               },
@@ -119,12 +119,11 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                 hintText: widget.hintText,
                 hintStyle: TextStyle(fontSize: hintSize, color: hintColor),
                 errorStyle:
-                const TextStyle(height: 0, fontSize: 0), // نخفي الرسالة هنا
+                const TextStyle(height: 0, fontSize: 0),
               ),
             ),
           ),
 
-          // رسالة الخطأ أسفل الحقل بشكل مستقل
           if (_errorText != null)
             Padding(
               padding: const EdgeInsets.only(left: 12, top: 4),

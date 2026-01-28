@@ -28,13 +28,12 @@ class _ImageToggleSwitchState extends State<ImageToggleSwitch> {
 
   @override
   Widget build(BuildContext context) {
-    const double outerBorderWidth = 4; // البوردر الخارجي
-    const double innerBorderWidth = 5; // البوردر الداخلي
-    const double imageSize = 25; // حجم الصورة
+    const double outerBorderWidth = 4;
+    const double innerBorderWidth = 5;
+    const double imageSize = 25;
 
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
 
-    // الطول = الصورة + البوردر الداخلي + البوردر الخارجي
     final double containerHeight =
         imageSize + innerBorderWidth * 2 + outerBorderWidth * 2;
 
@@ -65,7 +64,6 @@ class _ImageToggleSwitchState extends State<ImageToggleSwitch> {
                   height: imageSize + innerBorderWidth * 2,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    // ✅ لو Sun ومختارة → الخلفية Primary
                     color: (isSun && isSelected)
                         ? AppColors.primary
                         : Colors.transparent,
@@ -84,13 +82,11 @@ class _ImageToggleSwitchState extends State<ImageToggleSwitch> {
                       fit: BoxFit.cover,
                       color: () {
                         if (isSun && isSelected) {
-                          // ✅ لو Sun ومختارة → الأيقونة لونها خلفية الشاشة
                           return Theme.of(context).scaffoldBackgroundColor;
                         } else if (isSun && !isSelected) {
-                          // ✅ لو Sun ومش مختارة + دارك → الأيقونة Primary
                           return AppColors.primary;
                         }
-                        return null; // الوضع العادي
+                        return null;
                       }(),
                       colorBlendMode: BlendMode.srcIn,
                     ),
@@ -98,7 +94,7 @@ class _ImageToggleSwitchState extends State<ImageToggleSwitch> {
                 ),
               ),
               if (index != widget.images.length - 1)
-                const SizedBox(width: 30), // المسافة بين الصورتين
+                const SizedBox(width: 30),
             ],
           );
         }),

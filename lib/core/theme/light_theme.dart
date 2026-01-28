@@ -49,6 +49,6 @@ class LightTheme {
     fontSize: 16,
     fontWeight: FontWeight.w700,
     fontStyle: FontStyle.italic,
-    color: const Color(0xFF5669FF), // primary
+    color: const Color(0xFF5669FF),
   );
 }

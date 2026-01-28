@@ -35,7 +35,7 @@ class DarkTheme {
   static final TextStyle largeText = GoogleFonts.inter(
     fontSize: 20,
     fontWeight: FontWeight.w500,
-    color: Color(0xFF666666), // نفس الكود اللي حددتيه
+    color: Color(0xFF666666),
   );
 
   // link text

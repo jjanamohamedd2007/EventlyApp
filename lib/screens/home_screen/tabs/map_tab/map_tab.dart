@@ -1,4 +1,3 @@
-import 'package:evently_app/screens/home_screen/tabs/map_tab/location_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,7 +10,7 @@ import '../../../../core/theme/base_theme.dart' show BaseTheme;
 import '../../../../providers/my_provider.dart';
 
 class MapTab extends StatefulWidget {
-  final bool fromCreatePage; // لو جاي من الكيريت
+  final bool fromCreatePage;
 
   MapTab({super.key, required this.fromCreatePage});
 
@@ -33,7 +32,7 @@ class _MapTabState extends State<MapTab> {
   };
 
   late GoogleMapController controller;
-  bool mapReady = false; // لتحديد جاهزية الخريطة
+  bool mapReady = false;
 
   @override
   Widget build(BuildContext context) {
@@ -50,14 +49,13 @@ class _MapTabState extends State<MapTab> {
         statusBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
-        // FAB في الزاوية العليا
         floatingActionButton: Align(
           alignment: Alignment.topRight,
           child: Padding(
             padding: const EdgeInsets.only(top: 50),
             child: mapReady
                 ? FloatingActionButton(
-              heroTag: 'map_fab', // tag مميز
+              heroTag: 'map_fab',
               backgroundColor: isDark
                   ? BaseTheme.dark.scaffoldBackgroundColor
                   : AppColors.primary,
@@ -101,7 +99,7 @@ class _MapTabState extends State<MapTab> {
               onMapCreated: (GoogleMapController googleController) {
                 controller = googleController;
                 setState(() {
-                  mapReady = true; // الخريطة جاهزة
+                  mapReady = true;
                 });
               },
               initialCameraPosition: initCamera,

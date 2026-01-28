@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/base_theme.dart';
-import '../../../../../models/fire_base/firebase_manager.dart';
 import '../../../../../models/task_model.dart';
 import '../../../../../providers/my_provider.dart';
 
@@ -33,7 +32,6 @@ class _ImageCardState extends State<ImageCard> {
 
   @override
   Widget build(BuildContext context) {
-    // جلب حالة الثيم
     var provider = Provider.of<MyProvider>(context);
     bool isDark = provider.themeMode == ThemeMode.dark;
 
@@ -42,7 +40,6 @@ class _ImageCardState extends State<ImageCard> {
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          // الصورة حسب الفئة
           Image.asset(
             "assets/images/${widget.model.category.toLowerCase().replaceAll(' ', '')}.png",
             fit: BoxFit.cover,
@@ -50,7 +47,6 @@ class _ImageCardState extends State<ImageCard> {
             height: 200,
           ),
 
-          // الكارت السفلي
           Container(
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -71,7 +67,6 @@ class _ImageCardState extends State<ImageCard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // العنوان
                   Text(
                     widget.model.title,
                     style: const TextStyle(
@@ -80,7 +75,6 @@ class _ImageCardState extends State<ImageCard> {
                     ),
                   ),
 
-                  // الأزرار
                   Row(
                     children: [
                       IconButton(
@@ -119,7 +113,7 @@ class _ImageCardState extends State<ImageCard> {
 
                       CustomPopupMenuButton(task: widget.model),
 
-                      // القائمة المنسدلة
+
                     ],
                   ),
                 ],

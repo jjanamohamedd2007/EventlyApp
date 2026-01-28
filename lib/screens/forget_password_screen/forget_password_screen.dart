@@ -26,13 +26,13 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
-    final bool isDark = provider.themeMode == ThemeMode.dark; // ✅
+    final bool isDark = provider.themeMode == ThemeMode.dark;
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         iconTheme: IconThemeData(
-          color: AppColors.primary, // 👈 لون السهم
+          color: AppColors.primary,
         ),
         title: Text(
           tr("forget_password"),
@@ -92,7 +92,6 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                             emailController.text,
                           );
 
-                          // ✅ Success SnackBar
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               behavior: SnackBarBehavior.floating,
@@ -127,7 +126,6 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                             ),
                           );
                         } catch (e) {
-                          // ❌ Error SnackBar
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               behavior: SnackBarBehavior.floating,

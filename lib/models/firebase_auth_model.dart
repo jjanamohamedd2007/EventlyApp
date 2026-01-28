@@ -6,7 +6,7 @@ class AuthService {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn(
         scopes: ['email'],
-        serverClientId: "756667881925-v47rXXXXXXXXXXXX.apps.googleusercontent.com", // ← هنا ضعي الويب كلينت آي دي
+        serverClientId: "756667881925-v47rXXXXXXXXXXXX.apps.googleusercontent.com",
       );
 
       final GoogleSignInAccount? googleUser = await googleSignIn.signIn();

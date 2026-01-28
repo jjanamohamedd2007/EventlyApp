@@ -16,7 +16,6 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // لون الخلفية
     final Color backgroundColor = isDark
         ? BaseTheme.dark.scaffoldBackgroundColor
         : AppColors.primary;

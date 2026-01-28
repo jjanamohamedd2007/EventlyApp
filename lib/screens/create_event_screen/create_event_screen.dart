@@ -590,7 +590,6 @@ class _CreateEventScreenState extends State<CreateEventScreen> {
   }
 }
 
-/// 💬 Toast-style message in center of screen
 void showCustomMessage(
   BuildContext context,
   String message, {

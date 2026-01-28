@@ -2,8 +2,7 @@ import 'package:evently_app/core/theme/app_colors.dart';
 import 'package:evently_app/models/task_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../../../core/theme/base_theme.dart';
-import '../../../../../models/fire_base/firebase_manager.dart';
+
 import '../../../../../providers/my_provider.dart';
 import 'image_card.dart';
 
@@ -40,7 +39,6 @@ class _EventItemWidgetState extends State<EventItemWidget> {
           child: ImageCard(model:widget.model,initialFavorite:  widget.model.isFavorite,),
         ),
 
-        // ✅ عرض التاريخ بشكل صحيح من نوع DateTime
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
@@ -77,7 +75,6 @@ class _EventItemWidgetState extends State<EventItemWidget> {
     );
   }
 
-  // ✅ تعديل دالة الشهر لتستقبل int بدل String
   String _getMonthName(int monthNumber) {
     List<String> months = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',

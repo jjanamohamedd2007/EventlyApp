@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:evently_app/models/fire_base/firebase_manager.dart';
-import 'package:evently_app/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +28,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final formKey = GlobalKey<FormState>();
 
   final TextEditingController nameController = TextEditingController();
-  final TextEditingController locationController = TextEditingController(); // ⬅️
+  final TextEditingController locationController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController rePasswordController = TextEditingController();
@@ -88,7 +87,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   const ImageHeaderWidget(),
                   const SizedBox(height: 20),
 
-                  // الاسم
                   TextFormFieldWidget(
                     controller: nameController,
                     validator: (value) {
@@ -107,7 +105,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   const SizedBox(height: 20),
 
-                  // الموقع
                   TextFormFieldWidget(
                     controller: locationController,
                     validator: (value) {
@@ -120,11 +117,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     },
                     hintText: tr("Location"),
                     textInputType: TextInputType.text,
-                    imageField: "assets/images/Map_Pin.png", // ⬅️ صورة الموقع
+                    imageField: "assets/images/Map_Pin.png",
                   ),
                   const SizedBox(height: 20),
 
-                  // البريد الإلكتروني
                   TextFormFieldWidget(
                     controller: emailController,
                     hintText: tr("email"),
@@ -149,7 +145,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   const SizedBox(height: 20),
 
-                  // كلمة المرور
                   TextFormFieldWidget(
                     controller: passwordController,
                     hintText: tr("password"),
@@ -170,7 +165,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   const SizedBox(height: 20),
 
-                  // تأكيد كلمة المرور
                   TextFormFieldWidget(
                     controller: rePasswordController,
                     hintText: tr("re_password"),
@@ -204,10 +198,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           locationController.text,
                           emailController.text,
                           passwordController.text,
-                          // ⬅️ الموقع
                               () {
                             Navigator.pop(context);
-                            // عرض رسالة نجاح
                             showDialog(
                               context: context,
                               builder: (context) => AlertDialog(
@@ -276,7 +268,6 @@ class _SignupScreenState extends State<SignupScreen> {
                           },
                               (message) {
                             Navigator.pop(context);
-                            // عرض رسالة خطأ
                             showDialog(
                               context: context,
                               builder: (context) => AlertDialog(

@@ -2,8 +2,8 @@ import 'package:evently_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Button_Widget extends StatelessWidget {
-  final String text; // النص اللي هيظهر
-  final VoidCallback onPressed; // الفانكشن اللي هيتنفذ
+  final String text;
+  final VoidCallback onPressed;
 
   const Button_Widget({
     super.key,
