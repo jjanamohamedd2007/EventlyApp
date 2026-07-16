@@ -10,14 +10,13 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Firebase و Google Sign-In
+
   firebase_core: ^4.2.0
   firebase_auth: ^6.1.1
   cloud_firestore: ^6.0.3
   google_sign_in: 6.2.1
 
 
-  # حزم إضافية
   provider: ^6.1.5+1
   google_fonts: ^6.2.1
   cupertino_icons: ^1.0.8
